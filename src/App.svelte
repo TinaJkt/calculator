@@ -1,5 +1,61 @@
+<script>
+
+	import Display from './Display.svelte';
+	let view = '';
+
+	function insert(num){
+		view = view+num;
+	}
+	function equal(){
+		view= eval(view);
+	}
+	function clean(){
+		view="";
+	}
+	function back(){
+		if(view.length > 0) {
+			view = view.substring(0,view.length-1);
+		}		
+	}
+</script>
+
+<main>
+	<h1 class="headline">Taschenrechner</h1>
+
+	<div class="grid-container">
+		
+		<Display display={view}/>
+	
+  		<button class="button" on:click={() => insert("7")}>7</button>
+  		<button class="button" on:click={() => insert("8")}>8</button>
+  		<button class="button" on:click={() => insert("9")}>9</button>
+  		<button class="operator button" on:click={() => insert("+")}>+</button>
+
+  		<button class="button" on:click={() => insert("4")}>4</button>
+  		<button class="button" on:click={() => insert("5")}>5</button>
+  		<button class="button" on:click={() => insert("6")}>6</button>
+  		<button class="operator button" on:click={() => insert("-")}>-</button>
+
+  		<button class="button" on:click={() => insert("1")}>1</button>
+  		<button class="button" on:click={() => insert("2")}>2</button>
+  		<button class="button" on:click={() => insert("3")}>3</button>
+  		<button class="operator button" on:click={() => insert("/")}>/</button>
+
+  		<button class="button" on:click={() => insert(".")}>.</button>
+  		<button class="button" on:click={() => insert("0")} id="colspan">0</button>
+  		<button class="operator button" on:click={() => insert("*")}>*</button>
+
+		<button class="button" on:click={() => clean()} style="background-color: #D21906; color: white;">clear</button>
+  		<button class="button" on:click={() => equal()} id="colspan" style="background-color: #A4A620;">=</button>
+  		<button class="button"on:click={() => back()} style="background-color: #FF7C12;">&#9664</button>
+</div>
+
+</main>
+
 <style>
-    body{
+    main{
+		width: 100%;
+		height: 100%;
         background: black;
     }
 	.grid-container {
@@ -23,24 +79,6 @@
 		top:40px;
 		left:50%;
 		transform: translate(-50%,-50%);
-	}
-	.input {
-		grid-column-start: 1;
-  		grid-column-end: 5;
-		width: 100%;
-  		position: relative;
-  		margin: 30px auto;
-		margin-bottom: 50px;
-  		font-size: 20px;
-		font-family: Arial, Helvetica, sans-serif;
-		font-weight: bold;
-		letter-spacing: 0.1em;
-  		padding: 10px;
-  		background-color: #323232;
-		border: 2px solid black;
-		height: 3em;
-		color: white;
-		box-shadow: 1px 1px 10px 2px black inset;
 	}
 	.button {
 		border: 0.08em solid black;
@@ -72,58 +110,3 @@
 	}
 
 </style>
-
-<body>
-	<h1 class="headline">Taschenrechner</h1>
-
-	<div class="grid-container">
-		
-
-		<input class="input" type="text" name="textview" disabled/>
-		
-	
-  		<button class="button" onclick="insert(7)">7</button>
-  		<button class="button" onclick="insert(8)">8</button>
-  		<button class="button" onclick="insert(9)">9</button>
-  		<button class="operator button" onclick="insert('+')">+</button>
-
-  		<button class="button" onclick="insert(4)">4</button>
-  		<button class="button" onclick="insert(5)">5</button>
-  		<button class="button" onclick="insert(6)">6</button>
-  		<button class="operator button" onclick="insert('-')">-</button>
-
-  		<button class="button" onclick="insert(1)">1</button>
-  		<button class="button" onclick="insert(2)">2</button>
-  		<button class="button" onclick="insert(3)">3</button>
-  		<button class="operator button" onclick="insert('/')">/</button>
-
-  		<button class="button" onclick="insert('.')">.</button>
-  		<button class="button" onclick="insert(0)" id="colspan">0</button>
-  		<button class="operator button" onclick="insert('*')">*</button>
-
-		<button class="button" onclick="clean()" style="background-color: #D21906; color: white;">clear</button>
-  		<button class="button" onclick="equal()" id="colspan" style="background-color: #A4A620;">=</button>
-  		<button class="button" onclick="back()" style="background-color: #FF7C12;">&#9664</button>
-</div>
-
-	<script>
-		function insert(num){
-    		document.form.textview.value = document.form.textview.value+num;
-		}
-    	function equal(){
-        	var exp = document.form.textview.value;
-        	document.form.textview.value = eval(exp);
-    	}
-    	function clean(){
-        	document.form.textview.value = "";
-    	}
-    	function back(){
-        	var exp = document.form.textview.value;
-        	if(exp){
-            	document.form.textview.value = exp.substring(0,exp.length-1);
-        	}
-    	}
-	</script>    
-</body>
-
-<form action="" name="form"></form>

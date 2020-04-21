@@ -3,11 +3,29 @@
 	import Display from './Display.svelte';
 	let view = '';
 
+
+	async function calculate() {
+		const options =  {
+			method: "POST",
+			headers: new Headers({
+				'content-type': 'text/plain',
+				'Access-Control-Allow-Origin': '*'
+			})
+		}
+		console.log('view'+view);
+		const response = await fetch("http://localhost:8081/calculate?calculation="+view, options);
+		const todo = await response.body;
+		console.log(todo);
+
+		if (response.ok) {
+			return todo;
+		} else {
+			throw new Error(todo);
+		}
+	}
+
 	function insert(num){
 		view = view+num;
-	}
-	function equal(){
-		view= eval(view);
 	}
 	function clean(){
 		view="";
@@ -16,6 +34,13 @@
 		if(view.length > 0) {
 			view = view.substring(0,view.length-1);
 		}		
+	}
+	function handleEqual(e) {
+		calculate().then( (response) => {
+			alert(response);
+		}).catch( (error) => {
+			console.log(error.message);
+		});
 	}
 </script>
 
@@ -46,7 +71,7 @@
   		<button class="operator button" on:click={() => insert("*")}>*</button>
 
 		<button class="button" on:click={() => clean()} style="background-color: #D21906; color: white;">clear</button>
-  		<button class="button" on:click={() => equal()} id="colspan" style="background-color: #A4A620;">=</button>
+  		<button class="button" on:click={handleEqual} id="colspan" style="background-color: #A4A620;">=</button>
   		<button class="button"on:click={() => back()} style="background-color: #FF7C12;">&#9664</button>
 </div>
 

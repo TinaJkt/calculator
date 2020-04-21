@@ -551,53 +551,53 @@ var app = (function () {
     			button17 = element("button");
     			button17.textContent = "◀";
     			attr_dev(h1, "class", "headline svelte-1o92k49");
-    			add_location(h1, file$1, 47, 1, 896);
+    			add_location(h1, file$1, 50, 1, 926);
     			attr_dev(button0, "class", "button svelte-1o92k49");
-    			add_location(button0, file$1, 53, 4, 1011);
+    			add_location(button0, file$1, 56, 4, 1041);
     			attr_dev(button1, "class", "button svelte-1o92k49");
-    			add_location(button1, file$1, 54, 4, 1079);
+    			add_location(button1, file$1, 57, 4, 1109);
     			attr_dev(button2, "class", "button svelte-1o92k49");
-    			add_location(button2, file$1, 55, 4, 1147);
+    			add_location(button2, file$1, 58, 4, 1177);
     			attr_dev(button3, "class", "operator button svelte-1o92k49");
-    			add_location(button3, file$1, 56, 4, 1215);
+    			add_location(button3, file$1, 59, 4, 1245);
     			attr_dev(button4, "class", "button svelte-1o92k49");
-    			add_location(button4, file$1, 58, 4, 1294);
+    			add_location(button4, file$1, 61, 4, 1324);
     			attr_dev(button5, "class", "button svelte-1o92k49");
-    			add_location(button5, file$1, 59, 4, 1362);
+    			add_location(button5, file$1, 62, 4, 1392);
     			attr_dev(button6, "class", "button svelte-1o92k49");
-    			add_location(button6, file$1, 60, 4, 1430);
+    			add_location(button6, file$1, 63, 4, 1460);
     			attr_dev(button7, "class", "operator button svelte-1o92k49");
-    			add_location(button7, file$1, 61, 4, 1498);
+    			add_location(button7, file$1, 64, 4, 1528);
     			attr_dev(button8, "class", "button svelte-1o92k49");
-    			add_location(button8, file$1, 63, 4, 1577);
+    			add_location(button8, file$1, 66, 4, 1607);
     			attr_dev(button9, "class", "button svelte-1o92k49");
-    			add_location(button9, file$1, 64, 4, 1645);
+    			add_location(button9, file$1, 67, 4, 1675);
     			attr_dev(button10, "class", "button svelte-1o92k49");
-    			add_location(button10, file$1, 65, 4, 1713);
+    			add_location(button10, file$1, 68, 4, 1743);
     			attr_dev(button11, "class", "operator button svelte-1o92k49");
-    			add_location(button11, file$1, 66, 4, 1781);
+    			add_location(button11, file$1, 69, 4, 1811);
     			attr_dev(button12, "class", "button svelte-1o92k49");
-    			add_location(button12, file$1, 68, 4, 1860);
+    			add_location(button12, file$1, 71, 4, 1890);
     			attr_dev(button13, "class", "button svelte-1o92k49");
     			attr_dev(button13, "id", "colspan");
-    			add_location(button13, file$1, 69, 4, 1928);
+    			add_location(button13, file$1, 72, 4, 1958);
     			attr_dev(button14, "class", "operator button svelte-1o92k49");
-    			add_location(button14, file$1, 70, 4, 2009);
+    			add_location(button14, file$1, 73, 4, 2039);
     			attr_dev(button15, "class", "button svelte-1o92k49");
     			set_style(button15, "background-color", "#D21906");
     			set_style(button15, "color", "white");
-    			add_location(button15, file$1, 72, 2, 2086);
+    			add_location(button15, file$1, 75, 2, 2116);
     			attr_dev(button16, "class", "button svelte-1o92k49");
     			attr_dev(button16, "id", "colspan");
     			set_style(button16, "background-color", "#A4A620");
-    			add_location(button16, file$1, 73, 4, 2203);
+    			add_location(button16, file$1, 76, 4, 2233);
     			attr_dev(button17, "class", "button svelte-1o92k49");
     			set_style(button17, "background-color", "#FF7C12");
-    			add_location(button17, file$1, 74, 4, 2313);
+    			add_location(button17, file$1, 77, 4, 2343);
     			attr_dev(div, "class", "grid-container svelte-1o92k49");
-    			add_location(div, file$1, 49, 1, 941);
+    			add_location(div, file$1, 52, 1, 971);
     			attr_dev(main, "class", "svelte-1o92k49");
-    			add_location(main, file$1, 46, 0, 887);
+    			add_location(main, file$1, 49, 0, 917);
     		},
     		l: function claim(nodes) {
     			throw new Error_1("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -709,12 +709,13 @@ var app = (function () {
     			headers: new Headers({
     					"content-type": "text/plain",
     					"Access-Control-Allow-Origin": "*"
-    				})
+    				}),
+    			body: JSON.stringify({ calculation: view })
     		};
 
     		console.log("view" + view);
-    		const response = await fetch("http://localhost:8081/calculate?calculation=" + view, options);
-    		const todo = await response.body;
+    		const response = await fetch("http://localhost:8081/calculate", options);
+    		const todo = await response;
     		console.log(todo);
 
     		if (response.ok) {
@@ -742,7 +743,7 @@ var app = (function () {
     		calculate().then(response => {
     			alert(response);
     		}).catch(error => {
-    			console.log(error.message);
+    			alert(error.message);
     		});
     	}
 

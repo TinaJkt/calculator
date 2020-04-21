@@ -10,11 +10,14 @@
 			headers: new Headers({
 				'content-type': 'text/plain',
 				'Access-Control-Allow-Origin': '*'
+			}),
+			body : JSON.stringify({
+				calculation: view
 			})
 		}
 		console.log('view'+view);
-		const response = await fetch("http://localhost:8081/calculate?calculation="+view, options);
-		const todo = await response.body;
+		const response = await fetch("http://localhost:8081/calculate", options);
+		const todo = await response;
 		console.log(todo);
 
 		if (response.ok) {
@@ -39,7 +42,7 @@
 		calculate().then( (response) => {
 			alert(response);
 		}).catch( (error) => {
-			console.log(error.message);
+			alert(error.message);
 		});
 	}
 </script>

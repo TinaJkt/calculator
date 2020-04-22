@@ -8,20 +8,18 @@
 		const options =  {
 			method: "POST",
 			headers: new Headers({
-				'content-type': 'text/plain',
+				'content-type': 'application/json',
 				'Access-Control-Allow-Origin': '*'
 			}),
 			body : JSON.stringify({
 				calculation: view
 			})
-		}
-		console.log('view'+view);
+		}	
 		const response = await fetch("http://localhost:8081/calculate", options);
-		const todo = await response;
-		console.log(todo);
-
+		const todo = await response.json();
+	
 		if (response.ok) {
-			return todo;
+			return todo.result;
 		} else {
 			throw new Error(todo);
 		}
@@ -40,7 +38,7 @@
 	}
 	function handleEqual(e) {
 		calculate().then( (response) => {
-			alert(response);
+			view = response;
 		}).catch( (error) => {
 			alert(error.message);
 		});

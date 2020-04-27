@@ -349,7 +349,7 @@ var app = (function () {
     		c: function create() {
     			input = element("input");
     			input.value = /*display*/ ctx[0];
-    			attr_dev(input, "class", "input svelte-1c9un78");
+    			attr_dev(input, "class", "input svelte-ruhrm9");
     			attr_dev(input, "type", "text");
     			attr_dev(input, "name", "textview");
     			input.disabled = true;
@@ -445,41 +445,47 @@ var app = (function () {
     	let t1;
     	let div;
     	let t2;
+    	let br;
+    	let t3;
     	let button0;
-    	let t4;
+    	let t5;
     	let button1;
-    	let t6;
+    	let t7;
     	let button2;
-    	let t8;
+    	let t9;
     	let button3;
-    	let t10;
+    	let t11;
     	let button4;
-    	let t12;
+    	let t13;
     	let button5;
-    	let t14;
+    	let t15;
     	let button6;
-    	let t16;
+    	let t17;
     	let button7;
-    	let t18;
+    	let t19;
     	let button8;
-    	let t20;
+    	let t21;
     	let button9;
-    	let t22;
+    	let t23;
     	let button10;
-    	let t24;
+    	let t25;
     	let button11;
-    	let t26;
+    	let t27;
     	let button12;
-    	let t28;
+    	let t29;
     	let button13;
-    	let t30;
+    	let t31;
     	let button14;
-    	let t32;
+    	let t33;
     	let button15;
-    	let t34;
+    	let t35;
     	let button16;
-    	let t36;
+    	let t37;
     	let button17;
+    	let t39;
+    	let button18;
+    	let t41;
+    	let button19;
     	let current;
     	let dispose;
 
@@ -497,107 +503,140 @@ var app = (function () {
     			div = element("div");
     			create_component(display.$$.fragment);
     			t2 = space();
+    			br = element("br");
+    			t3 = space();
     			button0 = element("button");
     			button0.textContent = "7";
-    			t4 = space();
+    			t5 = space();
     			button1 = element("button");
     			button1.textContent = "8";
-    			t6 = space();
+    			t7 = space();
     			button2 = element("button");
     			button2.textContent = "9";
-    			t8 = space();
+    			t9 = space();
     			button3 = element("button");
     			button3.textContent = "+";
-    			t10 = space();
+    			t11 = space();
     			button4 = element("button");
     			button4.textContent = "4";
-    			t12 = space();
+    			t13 = space();
     			button5 = element("button");
     			button5.textContent = "5";
-    			t14 = space();
+    			t15 = space();
     			button6 = element("button");
     			button6.textContent = "6";
-    			t16 = space();
+    			t17 = space();
     			button7 = element("button");
     			button7.textContent = "-";
-    			t18 = space();
+    			t19 = space();
     			button8 = element("button");
     			button8.textContent = "1";
-    			t20 = space();
+    			t21 = space();
     			button9 = element("button");
     			button9.textContent = "2";
-    			t22 = space();
+    			t23 = space();
     			button10 = element("button");
     			button10.textContent = "3";
-    			t24 = space();
+    			t25 = space();
     			button11 = element("button");
     			button11.textContent = "/";
-    			t26 = space();
+    			t27 = space();
     			button12 = element("button");
     			button12.textContent = ".";
-    			t28 = space();
+    			t29 = space();
     			button13 = element("button");
     			button13.textContent = "0";
-    			t30 = space();
+    			t31 = space();
     			button14 = element("button");
     			button14.textContent = "*";
-    			t32 = space();
+    			t33 = space();
     			button15 = element("button");
     			button15.textContent = "clear";
-    			t34 = space();
+    			t35 = space();
     			button16 = element("button");
     			button16.textContent = "=";
-    			t36 = space();
+    			t37 = space();
     			button17 = element("button");
     			button17.textContent = "◀";
-    			attr_dev(h1, "class", "headline svelte-1o92k49");
-    			add_location(h1, file$1, 48, 1, 897);
-    			attr_dev(button0, "class", "button svelte-1o92k49");
-    			add_location(button0, file$1, 54, 4, 1012);
-    			attr_dev(button1, "class", "button svelte-1o92k49");
-    			add_location(button1, file$1, 55, 4, 1080);
-    			attr_dev(button2, "class", "button svelte-1o92k49");
-    			add_location(button2, file$1, 56, 4, 1148);
-    			attr_dev(button3, "class", "operator button svelte-1o92k49");
-    			add_location(button3, file$1, 57, 4, 1216);
-    			attr_dev(button4, "class", "button svelte-1o92k49");
-    			add_location(button4, file$1, 59, 4, 1295);
-    			attr_dev(button5, "class", "button svelte-1o92k49");
-    			add_location(button5, file$1, 60, 4, 1363);
-    			attr_dev(button6, "class", "button svelte-1o92k49");
-    			add_location(button6, file$1, 61, 4, 1431);
-    			attr_dev(button7, "class", "operator button svelte-1o92k49");
-    			add_location(button7, file$1, 62, 4, 1499);
-    			attr_dev(button8, "class", "button svelte-1o92k49");
-    			add_location(button8, file$1, 64, 4, 1578);
-    			attr_dev(button9, "class", "button svelte-1o92k49");
-    			add_location(button9, file$1, 65, 4, 1646);
-    			attr_dev(button10, "class", "button svelte-1o92k49");
-    			add_location(button10, file$1, 66, 4, 1714);
-    			attr_dev(button11, "class", "operator button svelte-1o92k49");
-    			add_location(button11, file$1, 67, 4, 1782);
-    			attr_dev(button12, "class", "button svelte-1o92k49");
-    			add_location(button12, file$1, 69, 4, 1861);
-    			attr_dev(button13, "class", "button svelte-1o92k49");
+    			t39 = space();
+    			button18 = element("button");
+    			button18.textContent = "store 🖫";
+    			t41 = space();
+    			button19 = element("button");
+    			button19.textContent = "query 🗁";
+    			attr_dev(h1, "class", "headline svelte-18n9fxf");
+    			add_location(h1, file$1, 123, 1, 2342);
+    			add_location(br, file$1, 128, 1, 2460);
+    			attr_dev(button0, "class", "button svelte-18n9fxf");
+    			attr_dev(button0, "id", "first");
+    			add_location(button0, file$1, 129, 4, 2471);
+    			attr_dev(button1, "class", "button svelte-18n9fxf");
+    			attr_dev(button1, "id", "second");
+    			add_location(button1, file$1, 130, 4, 2550);
+    			attr_dev(button2, "class", "button svelte-18n9fxf");
+    			attr_dev(button2, "id", "third");
+    			add_location(button2, file$1, 131, 4, 2630);
+    			attr_dev(button3, "class", "operator button svelte-18n9fxf");
+    			attr_dev(button3, "id", "fourth");
+    			add_location(button3, file$1, 132, 4, 2709);
+    			attr_dev(button4, "class", "button svelte-18n9fxf");
+    			attr_dev(button4, "id", "first");
+    			add_location(button4, file$1, 134, 4, 2800);
+    			attr_dev(button5, "class", "button svelte-18n9fxf");
+    			attr_dev(button5, "id", "second");
+    			add_location(button5, file$1, 135, 4, 2879);
+    			attr_dev(button6, "class", "button svelte-18n9fxf");
+    			attr_dev(button6, "id", "third");
+    			add_location(button6, file$1, 136, 4, 2959);
+    			attr_dev(button7, "class", "operator button svelte-18n9fxf");
+    			attr_dev(button7, "id", "fourth");
+    			add_location(button7, file$1, 137, 4, 3038);
+    			attr_dev(button8, "class", "button svelte-18n9fxf");
+    			attr_dev(button8, "id", "first");
+    			add_location(button8, file$1, 139, 4, 3129);
+    			attr_dev(button9, "class", "button svelte-18n9fxf");
+    			attr_dev(button9, "id", "second");
+    			add_location(button9, file$1, 140, 4, 3208);
+    			attr_dev(button10, "class", "button svelte-18n9fxf");
+    			attr_dev(button10, "id", "third");
+    			add_location(button10, file$1, 141, 4, 3288);
+    			attr_dev(button11, "class", "operator button svelte-18n9fxf");
+    			attr_dev(button11, "id", "fourth");
+    			add_location(button11, file$1, 142, 4, 3367);
+    			attr_dev(button12, "class", "button svelte-18n9fxf");
+    			attr_dev(button12, "id", "first");
+    			add_location(button12, file$1, 144, 4, 3458);
+    			attr_dev(button13, "class", "button svelte-18n9fxf");
     			attr_dev(button13, "id", "colspan");
-    			add_location(button13, file$1, 70, 4, 1929);
-    			attr_dev(button14, "class", "operator button svelte-1o92k49");
-    			add_location(button14, file$1, 71, 4, 2010);
-    			attr_dev(button15, "class", "button svelte-1o92k49");
+    			add_location(button13, file$1, 145, 4, 3537);
+    			attr_dev(button14, "class", "operator button svelte-18n9fxf");
+    			attr_dev(button14, "id", "fourth");
+    			add_location(button14, file$1, 146, 4, 3618);
+    			attr_dev(button15, "class", "button svelte-18n9fxf");
+    			attr_dev(button15, "id", "first");
     			set_style(button15, "background-color", "#D21906");
     			set_style(button15, "color", "white");
-    			add_location(button15, file$1, 73, 2, 2087);
-    			attr_dev(button16, "class", "button svelte-1o92k49");
+    			add_location(button15, file$1, 148, 2, 3707);
+    			attr_dev(button16, "class", "button svelte-18n9fxf");
     			attr_dev(button16, "id", "colspan");
     			set_style(button16, "background-color", "#A4A620");
-    			add_location(button16, file$1, 74, 4, 2204);
-    			attr_dev(button17, "class", "button svelte-1o92k49");
+    			add_location(button16, file$1, 149, 4, 3835);
+    			attr_dev(button17, "class", "button svelte-18n9fxf");
     			set_style(button17, "background-color", "#FF7C12");
-    			add_location(button17, file$1, 75, 4, 2314);
-    			attr_dev(div, "class", "grid-container svelte-1o92k49");
-    			add_location(div, file$1, 50, 1, 942);
-    			attr_dev(main, "class", "svelte-1o92k49");
-    			add_location(main, file$1, 47, 0, 888);
+    			attr_dev(button17, "id", "fourth");
+    			add_location(button17, file$1, 150, 4, 3945);
+    			attr_dev(button18, "class", "button svelte-18n9fxf");
+    			attr_dev(button18, "id", "store");
+    			set_style(button18, "background-color", "#81DAF5");
+    			add_location(button18, file$1, 152, 2, 4059);
+    			attr_dev(button19, "class", "button svelte-18n9fxf");
+    			attr_dev(button19, "id", "call");
+    			set_style(button19, "background-color", "#3104B4");
+    			add_location(button19, file$1, 153, 2, 4184);
+    			attr_dev(div, "class", "grid-container svelte-18n9fxf");
+    			add_location(div, file$1, 125, 1, 2387);
+    			attr_dev(main, "class", "svelte-18n9fxf");
+    			add_location(main, file$1, 122, 0, 2333);
     		},
     		l: function claim(nodes) {
     			throw new Error_1("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -609,63 +648,71 @@ var app = (function () {
     			append_dev(main, div);
     			mount_component(display, div, null);
     			append_dev(div, t2);
+    			append_dev(div, br);
+    			append_dev(div, t3);
     			append_dev(div, button0);
-    			append_dev(div, t4);
+    			append_dev(div, t5);
     			append_dev(div, button1);
-    			append_dev(div, t6);
+    			append_dev(div, t7);
     			append_dev(div, button2);
-    			append_dev(div, t8);
+    			append_dev(div, t9);
     			append_dev(div, button3);
-    			append_dev(div, t10);
+    			append_dev(div, t11);
     			append_dev(div, button4);
-    			append_dev(div, t12);
+    			append_dev(div, t13);
     			append_dev(div, button5);
-    			append_dev(div, t14);
+    			append_dev(div, t15);
     			append_dev(div, button6);
-    			append_dev(div, t16);
+    			append_dev(div, t17);
     			append_dev(div, button7);
-    			append_dev(div, t18);
+    			append_dev(div, t19);
     			append_dev(div, button8);
-    			append_dev(div, t20);
+    			append_dev(div, t21);
     			append_dev(div, button9);
-    			append_dev(div, t22);
+    			append_dev(div, t23);
     			append_dev(div, button10);
-    			append_dev(div, t24);
+    			append_dev(div, t25);
     			append_dev(div, button11);
-    			append_dev(div, t26);
+    			append_dev(div, t27);
     			append_dev(div, button12);
-    			append_dev(div, t28);
+    			append_dev(div, t29);
     			append_dev(div, button13);
-    			append_dev(div, t30);
+    			append_dev(div, t31);
     			append_dev(div, button14);
-    			append_dev(div, t32);
+    			append_dev(div, t33);
     			append_dev(div, button15);
-    			append_dev(div, t34);
+    			append_dev(div, t35);
     			append_dev(div, button16);
-    			append_dev(div, t36);
+    			append_dev(div, t37);
     			append_dev(div, button17);
+    			append_dev(div, t39);
+    			append_dev(div, button18);
+    			append_dev(div, t41);
+    			append_dev(div, button19);
     			current = true;
     			if (remount) run_all(dispose);
 
     			dispose = [
-    				listen_dev(button0, "click", /*click_handler*/ ctx[6], false, false, false),
-    				listen_dev(button1, "click", /*click_handler_1*/ ctx[7], false, false, false),
-    				listen_dev(button2, "click", /*click_handler_2*/ ctx[8], false, false, false),
-    				listen_dev(button3, "click", /*click_handler_3*/ ctx[9], false, false, false),
-    				listen_dev(button4, "click", /*click_handler_4*/ ctx[10], false, false, false),
-    				listen_dev(button5, "click", /*click_handler_5*/ ctx[11], false, false, false),
-    				listen_dev(button6, "click", /*click_handler_6*/ ctx[12], false, false, false),
-    				listen_dev(button7, "click", /*click_handler_7*/ ctx[13], false, false, false),
-    				listen_dev(button8, "click", /*click_handler_8*/ ctx[14], false, false, false),
-    				listen_dev(button9, "click", /*click_handler_9*/ ctx[15], false, false, false),
-    				listen_dev(button10, "click", /*click_handler_10*/ ctx[16], false, false, false),
-    				listen_dev(button11, "click", /*click_handler_11*/ ctx[17], false, false, false),
-    				listen_dev(button12, "click", /*click_handler_12*/ ctx[18], false, false, false),
-    				listen_dev(button13, "click", /*click_handler_13*/ ctx[19], false, false, false),
-    				listen_dev(button14, "click", /*click_handler_14*/ ctx[20], false, false, false),
-    				listen_dev(button15, "click", /*click_handler_15*/ ctx[21], false, false, false),
+    				listen_dev(button0, "click", /*click_handler*/ ctx[9], false, false, false),
+    				listen_dev(button1, "click", /*click_handler_1*/ ctx[10], false, false, false),
+    				listen_dev(button2, "click", /*click_handler_2*/ ctx[11], false, false, false),
+    				listen_dev(button3, "click", /*click_handler_3*/ ctx[12], false, false, false),
+    				listen_dev(button4, "click", /*click_handler_4*/ ctx[13], false, false, false),
+    				listen_dev(button5, "click", /*click_handler_5*/ ctx[14], false, false, false),
+    				listen_dev(button6, "click", /*click_handler_6*/ ctx[15], false, false, false),
+    				listen_dev(button7, "click", /*click_handler_7*/ ctx[16], false, false, false),
+    				listen_dev(button8, "click", /*click_handler_8*/ ctx[17], false, false, false),
+    				listen_dev(button9, "click", /*click_handler_9*/ ctx[18], false, false, false),
+    				listen_dev(button10, "click", /*click_handler_10*/ ctx[19], false, false, false),
+    				listen_dev(button11, "click", /*click_handler_11*/ ctx[20], false, false, false),
+    				listen_dev(button12, "click", /*click_handler_12*/ ctx[21], false, false, false),
+    				listen_dev(button13, "click", /*click_handler_13*/ ctx[22], false, false, false),
+    				listen_dev(button14, "click", /*click_handler_14*/ ctx[23], false, false, false),
+    				listen_dev(button15, "click", /*click_handler_15*/ ctx[24], false, false, false),
     				listen_dev(button16, "click", /*handleEqual*/ ctx[4], false, false, false),
-    				listen_dev(button17, "click", /*click_handler_16*/ ctx[22], false, false, false)
+    				listen_dev(button17, "click", /*click_handler_16*/ ctx[25], false, false, false),
+    				listen_dev(button18, "click", /*click_handler_17*/ ctx[26], false, false, false),
+    				listen_dev(button19, "click", /*click_handler_18*/ ctx[27], false, false, false)
     			];
     		},
     		p: function update(ctx, [dirty]) {
@@ -700,6 +747,35 @@ var app = (function () {
     	return block;
     }
 
+    async function call() {
+    	const options = {
+    		method: "GET",
+    		headers: new Headers({
+    				"content-type": "application/json",
+    				"Access-Control-Allow-Origin": "*"
+    			})
+    	};
+
+    	const response = await fetch("http://localhost:8081/store", options);
+    	const callValue = await response.json();
+
+    	if (response.ok) {
+    		return callValue.result;
+    	} else {
+    		throw new Error(callValue);
+    	}
+    }
+
+    function checkString(string) {
+    	let check = string.substring(string.length - 1);
+
+    	if (isNaN(check)) {
+    		return true;
+    	} else {
+    		return false;
+    	}
+    }
+
     function instance$1($$self, $$props, $$invalidate) {
     	let view = "";
 
@@ -723,6 +799,19 @@ var app = (function () {
     		}
     	}
 
+    	async function store() {
+    		const options = {
+    			method: "POST",
+    			headers: new Headers({
+    					"content-type": "application/json",
+    					"Access-Control-Allow-Origin": "*"
+    				}),
+    			body: JSON.stringify({ store: view })
+    		};
+
+    		const response = await fetch("http://localhost:8081/store", options);
+    	}
+
     	function insert(num) {
     		$$invalidate(0, view = view + num);
     	}
@@ -740,6 +829,31 @@ var app = (function () {
     	function handleEqual(e) {
     		calculate().then(response => {
     			$$invalidate(0, view = response);
+    		}).catch(error => {
+    			alert(error.message);
+    		});
+    	}
+
+    	function storeValue(e) {
+    		store().then(response => {
+
+    			if (view != "") {
+    				alert("Der Wert " + view + " wurde gespeichert.");
+    			} else {
+    				alert("Der Store ist leer.");
+    			}
+    		}).catch(error => {
+    			alert(error.message);
+    		});
+    	}
+
+    	function callValue() {
+    		call().then(response => {
+    			if (checkString(view)) {
+    				$$invalidate(0, view = view + response);
+    			} else {
+    				$$invalidate(0, view = response);
+    			}
     		}).catch(error => {
     			alert(error.message);
     		});
@@ -770,15 +884,22 @@ var app = (function () {
     	const click_handler_14 = () => insert("*");
     	const click_handler_15 = () => clean();
     	const click_handler_16 = () => back();
+    	const click_handler_17 = () => storeValue();
+    	const click_handler_18 = () => callValue();
 
     	$$self.$capture_state = () => ({
     		Display,
     		view,
     		calculate,
+    		store,
+    		call,
     		insert,
     		clean,
     		back,
-    		handleEqual
+    		handleEqual,
+    		storeValue,
+    		callValue,
+    		checkString
     	});
 
     	$$self.$inject_state = $$props => {
@@ -795,7 +916,10 @@ var app = (function () {
     		clean,
     		back,
     		handleEqual,
+    		storeValue,
+    		callValue,
     		calculate,
+    		store,
     		click_handler,
     		click_handler_1,
     		click_handler_2,
@@ -812,7 +936,9 @@ var app = (function () {
     		click_handler_13,
     		click_handler_14,
     		click_handler_15,
-    		click_handler_16
+    		click_handler_16,
+    		click_handler_17,
+    		click_handler_18
     	];
     }
 

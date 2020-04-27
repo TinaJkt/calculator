@@ -8,11 +8,10 @@
 <style>
 	.input {
 		grid-column-start: 1;
-  		grid-column-end: 5;
+  		grid-column-end: 8;
+		align-self: center;
 		width: 100%;
   		position: relative;
-  		margin: 30px auto;
-		margin-bottom: 50px;
   		font-size: 20px;
 		font-family: Arial, Helvetica, sans-serif;
 		font-weight: bold;
